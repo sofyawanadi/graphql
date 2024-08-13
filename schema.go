@@ -4,6 +4,7 @@ type SchemaConfig struct {
 	Query        *Object
 	Mutation     *Object
 	Subscription *Object
+	DisableIntroSpectionQuery bool
 	Types        []Type
 	Directives   []*Directive
 	Extensions   []Extension
@@ -34,7 +35,7 @@ type TypeMap map[string]Type
 type Schema struct {
 	typeMap    TypeMap
 	directives []*Directive
-
+	disableIntroSpectionQuery bool
 	queryType        *Object
 	mutationType     *Object
 	subscriptionType *Object
@@ -59,7 +60,7 @@ func NewSchema(config SchemaConfig) (Schema, error) {
 	if config.Mutation != nil && config.Mutation.err != nil {
 		return schema, config.Mutation.err
 	}
-
+	schema.disableIntroSpectionQuery = config.DisableIntroSpectionQuery
 	schema.queryType = config.Query
 	schema.mutationType = config.Mutation
 	schema.subscriptionType = config.Subscription

@@ -239,7 +239,8 @@ func DefaultTypeInfoFieldDef(schema *Schema, parentType Type, fieldAST *ast.Fiel
 		name = fieldAST.Name.Value
 	}
 	if name == SchemaMetaFieldDef.Name &&
-		schema.QueryType() == parentType {
+		schema.QueryType() == parentType &&
+		schema.disableIntroSpectionQuery == false {
 		return SchemaMetaFieldDef
 	}
 	if name == TypeMetaFieldDef.Name &&
