@@ -1,10 +1,10 @@
 package graphql
 
 import (
-	"github.com/graphql-go/graphql/gqlerrors"
-	"github.com/graphql-go/graphql/language/ast"
-	"github.com/graphql-go/graphql/language/kinds"
-	"github.com/graphql-go/graphql/language/visitor"
+	"github.com/sofyawanadi/graphql/gqlerrors"
+	"github.com/sofyawanadi/graphql/language/ast"
+	"github.com/sofyawanadi/graphql/language/kinds"
+	"github.com/sofyawanadi/graphql/language/visitor"
 )
 
 type ValidationResult struct {

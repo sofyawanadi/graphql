@@ -7,7 +7,7 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/graphql-go/graphql"
+	"github.com/sofyawanadi/graphql"
 )
 
 var Schema graphql.Schema
