@@ -5,9 +5,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/graphql-go/graphql/language/ast"
-	"github.com/graphql-go/graphql/language/location"
-	"github.com/graphql-go/graphql/language/source"
+	"github.com/sofyawanadi/graphql/language/ast"
+	"github.com/sofyawanadi/graphql/language/location"
+	"github.com/sofyawanadi/graphql/language/source"
 )
 
 func NewSyntaxError(s *source.Source, position int, description string) *Error {
